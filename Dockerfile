@@ -20,12 +20,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgtk-3-0 \
     libgtk-4-1 \
     libnss3 \
-    libasound2 \
+    libasound2t64 \
     libgbm1 \
     libnotify4 \
     libxss1 \
     libxtst6 \
-    libgl1-mesa-dri \
-    libgl1-mesa-glx \
     libvulkan1 \
     && rm -rf /var/lib/apt/lists/*
