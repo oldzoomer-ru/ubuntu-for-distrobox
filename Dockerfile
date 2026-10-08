@@ -3,6 +3,7 @@ FROM quay.io/toolbx/ubuntu-toolbox:26.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get dist-upgrade -y \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y \
@@ -17,4 +18,5 @@ RUN apt-get update && apt-get install -y \
     libsecret-1-0 \
     dbus-x11 \
     libwebkitgtk-6.0-4 \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
